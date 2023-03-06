@@ -25,10 +25,15 @@ function keyEvent(event) {
 }
 
 
+//const header_tmp = document.getElementById("header");
+//const header = header_tmp.content.cloneNode(true);
 const header = document.getElementById("header");
+
+console.log(header);
   for (let i = 0; i < slides.children.length; i++) {
     const slide = slides.children.item(i);
     slide.insertBefore(header, slide.firsChild);
+    //header.classList.add("header");
   }
 document.body.addEventListener("keydown", keyEvent);
 selectSlide(0);

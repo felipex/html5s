@@ -52,3 +52,9 @@ to this section's matching END comment to see page-specific styles.
 h1 {
   text-align: center;
 }
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
