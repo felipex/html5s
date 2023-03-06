@@ -41,3 +41,17 @@ console.log(header);
 document.body.addEventListener("keydown", keyEvent);
 selectSlide(0);
 
+function loadRemoteSlide(name) {
+  const tt = fetch(`/slides/${name}`);
+  console.log
+}
+
+function loadRemoteSlides(){
+  for (let i = 0; i < slides.children.length; i++) {
+    if (slides.children.item(i).id) {
+    console.log(`${slides.children.item(i).id}.html`);
+    }
+  }
+}
+
+loadRemoteSlides();
