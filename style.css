@@ -14,26 +14,41 @@ to this section's matching END comment to see page-specific styles.
   See if you can cross-reference the rules in this file with the elements in index.html
 */
 :root {
-  --slide-width: 400px;
-  --slide-height: 300px;
+  --slide-width: 100%;
+  --slide-height: 100%;
 }
 
 .slides{
   width: var(--slide-width);
   height: var(--slide-height);
-  border: 1px solid blue;
+  border: 1px solid blue; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
 }
 
 .slide{
-  width: var(--slide-width);
-  height: var(--slide-height);
-  border: 1px solid green;
+  width: 100%;
+  height: 100%;
+ 
+  background: #3F497F;
+  color: #F8F5E4;
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
 }
 
 .front {
-  background: green;
+  visibility: visible;
 }
 
 .back {
-  background: black;
+  visibility: hidden;
+}
+
+h1 {
+  text-align: center;
 }
