@@ -49,12 +49,10 @@ to this section's matching END comment to see page-specific styles.
   visibility: hidden;
 }
 
-h1 {
+h2 {
   text-align: center;
 }
 
 .header {
-  position: absolute;
-  left: 0;
-  top: 0;
+  text-align: center;
 }
