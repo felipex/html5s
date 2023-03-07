@@ -26,19 +26,8 @@ function keyEvent(event) {
   selectSlide(index);
 }
 
-//const header_tmp = document.getElementById("header");
-//const header = header_tmp.content.cloneNode(true);
 const header = document.getElementById("header");
 
-/*
-console.log(header);
-  for (let i = 0; i < slides.children.length; i++) {
-    const slide = slides.children.item(i);
-    const h = header.cloneNode();
-    h.innerHTML = header.innerHTML;
-    slide.insertBefore(h, slide.firsChild);
-  }
-*/
 document.body.addEventListener("keydown", keyEvent);
 selectSlide(0);
 
@@ -47,11 +36,9 @@ function loadRemoteSlide(slide, file) {
     if (response.ok) {
       return response.text();
     }
-  }
-  ).then(txt => {
-    console.warn(slide.innerHTML);
+  })
+  .then(txt => {
     slide.innerHTML = txt;
-    console.log(txt);
   })
 }
 
