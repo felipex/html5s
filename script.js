@@ -56,6 +56,22 @@ function loadRemoteSlides() {
 loadRemoteSlides();
 
 
-function teste(e){
-  console.log(e);
+function marcaColuna(e, col){
+  const coluna = document.getElementsByClassName(col);
+  console.log(coluna);
+
+  for (let i = 0; i < coluna.length; i++) {
+    const celula = coluna.item(i);
+    celula.classList.add("marcaCol");
+  }  
+}
+
+function desmarcaColuna(e, col){
+  const coluna = document.getElementsByClassName(col);
+  console.log(coluna);
+
+  for (let i = 0; i < coluna.length; i++) {
+    const celula = coluna.item(i);
+    celula.classList.remove("marcaCol");
+  }  
 }

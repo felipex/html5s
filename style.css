@@ -69,3 +69,8 @@ a {
   text-align: center;
 }
 
+
+.marcaCol {
+  background-color: val(--color2);
+  color: var(--color4);
+}
