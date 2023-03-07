@@ -54,3 +54,8 @@ function loadRemoteSlides() {
 }
 
 loadRemoteSlides();
+
+
+function teste(e){
+  console.log(e);
+}

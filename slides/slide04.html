@@ -28,7 +28,6 @@
   }
 </style>
 
-
 <div class="slide">
   <h1>Padrões de Vencimento</h1>
   <table class="tab-padroes" style="margin-left: auto; margin-right: auto; display: block;">
@@ -41,7 +40,7 @@
         <th class="col4">I</th>
         <th class="col5">II</th>
         <th class="col6">III</th>
-        <th class="col6">IV</th>
+        <th class="col6" onmouseover="teste(this)">IV</th>
       </tr>
       <tr>
         <td class="col1"></td>
@@ -214,16 +213,6 @@
         <td class="col6">2</td>
         <td class="col6">1</td>
       </tr>
-      <tr>
-        <td class="col1"></td>
-        <td class="col2">P36</td>
-        <td class="col3">R$ 2.744,57</td>
-        <td class="col4"></td>
-        <td class="col5">16</td>
-        <td class="col6">2</td>
-        <td class="col6">1</td>
-      </tr>
-
   </tbody>
   </table>
 </div>
@@ -231,7 +220,8 @@
 <script>
   const colunas = document.getElementsByTagName("th");
   for (let i = 0; i < colunas.length; i++) {
-  colunas.addEventListener("mouseover", function( event ) {
+    console.log("add event");
+  colunas[i].addEventListener("mouseover", function( event ) {
     console.log(event);
   }
   }
