@@ -42,14 +42,13 @@ console.log(header);
 document.body.addEventListener("keydown", keyEvent);
 selectSlide(0);
 
-function loadRemoteSlide(id, file) {
+function loadRemoteSlide(slide, file) {
   fetch(`/slides/${file}`).then(response => {
     if (response.ok) {
       return response.text();
     }
   }
   ).then(txt => {
-    const slide = document.getElementById(id);
     console.warn(slide.innerHTML);
     slide.innerHTML = txt;
     console.log(txt);
@@ -58,10 +57,11 @@ function loadRemoteSlide(id, file) {
 
 function loadRemoteSlides() {
   for (let i = 0; i < slides.children.length; i++) {
-    if (slides.children.item(i).id) {
-      let slideID = slides.children.item(i).id;
+    const slide = slides.children.item(i);
+    if (slide.dataset.filename) {
+      let slideID = slide.dataset.filename;
       let slideFile = `${slideID}.html`;
-      loadRemoteSlide(slideID, slideFile);
+      loadRemoteSlide(slide, slideFile);
     }
   }
 }
