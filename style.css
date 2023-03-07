@@ -71,6 +71,7 @@ a {
 
 
 .marcaCol {
-  background-color: val(--color2);
-  color: var(--color4);
+background-color: var(--color2);
+    color: var(--color4);
+    font-size: 1.2em;
 }

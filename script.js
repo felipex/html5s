@@ -58,7 +58,6 @@ loadRemoteSlides();
 
 function marcaColuna(e, col){
   const coluna = document.getElementsByClassName(col);
-  console.log(coluna);
 
   for (let i = 0; i < coluna.length; i++) {
     const celula = coluna.item(i);
@@ -68,7 +67,6 @@ function marcaColuna(e, col){
 
 function desmarcaColuna(e, col){
   const coluna = document.getElementsByClassName(col);
-  console.log(coluna);
 
   for (let i = 0; i < coluna.length; i++) {
     const celula = coluna.item(i);
