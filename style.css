@@ -8,10 +8,11 @@
   --color2: #3F497F;
   --color3: #F7C04A;
   --color4: #F8F5E4;
+  --color5: gray;
 }
 
 body {
-  background-color: black;  
+  background-color: var(--color4);  
 }
 
 .slides{

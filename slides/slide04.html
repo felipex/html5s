@@ -24,6 +24,7 @@
   td:hover {
     background-color: var(--color2);
     color: var(--color4);
+    font-size: 1.2em;
   }
 </style>
 
@@ -181,7 +182,7 @@
         <td class="col1"></td>
         <td class="col2">P32</td>
         <td class="col3">R$ 2.744,57</td>
-        <td class="col4">15</td>
+        <td class="col4">16</td>
         <td class="col5">3</td>
         <td class="col6">2</td>
         <td class="col6">1</td>
@@ -190,7 +191,7 @@
         <td class="col1"></td>
         <td class="col2">P33</td>
         <td class="col3">R$ 2.744,57</td>
-        <td class="col4">16</td>
+        <td class="col4"></td>
         <td class="col5">15</td>
         <td class="col6">2</td>
         <td class="col6">1</td>
@@ -226,3 +227,12 @@
   </tbody>
   </table>
 </div>
+
+<script>
+  const colunas = document.getElementsByTagName("th");
+  for (let i = 0; i < colunas.length; i++) {
+  colunas.addEventListener("mouseover", function( event ) {
+    console.log(event);
+  }
+  }
+</script>
