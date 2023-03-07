@@ -5,15 +5,15 @@
 }
   
   .col1 {
-    width: 5em;
+    width: 6em;
     text-align: center;
   }
   .col2 {
-    width: 5em;
+    width: 6em;
     text-align: center;
   }
   .col3 {
-    width: 8em;
+    width: 10em;
     text-align: right;
   }
   .col4, .col5, .col6, .col7 {
@@ -26,6 +26,14 @@
     color: var(--color4);
     font-size: 1.2em;
   }
+  
+
+
+.tab-padroes tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+  
 </style>
 
 <div class="slide">
@@ -35,13 +43,13 @@
     <tbody>
       <tr>
         <th class="col1"></th>
-        <th class="col2">---</th>
+        <th class="col2"></th>
         <th class="col3"></th>
-        <th class="col4" colspan="4">Nível D</th>
+        <th class="col4 col5 col6 col7" colspan="4">Nível D</th>
       </tr>
       <tr>
         <th class="col1"></th>
-        <th class="col2">---</th>
+        <th class="col2">Padrão</th>
         <th class="col3">Valor</th>
         <th class="col4" onmouseover="marcaColuna(this, 'col4')" onmouseout="desmarcaColuna(this, 'col4')">I</th>
         <th class="col5" onmouseover="marcaColuna(this, 'col5')" onmouseout="desmarcaColuna(this, 'col5')">II</th>
@@ -49,7 +57,7 @@
         <th class="col7" onmouseover="marcaColuna(this, 'col7')" onmouseout="desmarcaColuna(this, 'col7')">IV</th>
       </tr>
       <tr>
-        <td class="col1"></td>
+        <td class="col1">Piso DI</td>
         <td class="col2">P17</td>
         <td class="col3">R$ 2.446,96</td>
         <td class="col4">1</td>
@@ -175,7 +183,7 @@
         <td class="col7">1</td>
       </tr>
       <tr>
-        <td class="col1"></td>
+        <td class="col1">Piso EI</td>
         <td class="col2">P31</td>
         <td class="col3">R$ 2.744,57</td>
         <td class="col4">15</td>
