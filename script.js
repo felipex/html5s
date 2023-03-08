@@ -74,6 +74,8 @@ function desmarcaColuna(e, col){
   }  
 }
 
-function clicou(e) {
-  console.log(e);
+
+function marcaCliques(){
+  const table = document.getElementsByTagName("table")[0];
+  console.log(table);
 }
