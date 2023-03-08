@@ -1,33 +1,63 @@
+<style>
+.tab-quali {
+  width: 35em; 
+  border: 1px solid var(--color1);
+}
+  
+.tab-quali  .col1 {
+    width: 20em;
+    text-align: left;
+  }
+.tab-quali  .col2, .col3 {
+    width: 7em;
+    text-align: center;
+  }
+
+  td:hover {
+    background-color: var(--color2);
+    color: var(--color4);
+    font-size: 1.2em;
+  }
+  
+
+
+.tab-quali tbody tr:nth-child(odd) {
+   background-color: var(--color5);
+}
+
+  
+</style>
+
 <div class="slide">
   <h1>Incentivo à Qualificação</h1>
-  <table>
+  <table class="tab-quali" style="margin-left: auto; margin-right: auto; display: block;">
     <thead>
       <tr>
-        <td>Nível de escolaridade superior ao previsto no cargo</td>
-        <td>Relação direta</td>
-        <td>Relação indireta</td>
+        <td class="col1">Nível de escolaridade superior ao previsto no cargo</td>
+        <td class="col2">Relação direta</td>
+        <td class="col3">Relação indireta</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Graduação</td>
-        <td>25%</td>
-        <td>15%</td>
+        <td class="col1">Graduação</td>
+        <td class="col2">25%</td>
+        <td class="col3">15%</td>
       </tr>
       <tr>
-        <td>Especialização</td>
-        <td>30%</td>
-        <td>20%</td>
+        <td class="col1">Especialização</td>
+        <td class="col2">30%</td>
+        <td class="col3">20%</td>
       </tr>
       <tr>
-        <td>Mestrado</td>
-        <td>52%</td>
-        <td>35%</td>
+        <td class="col1">Mestrado</td>
+        <td class="col2">52%</td>
+        <td class="col3">35%</td>
       </tr>
       <tr>
-        <td>Doutorado</td>
-        <td>75%</td>
-        <td>50%</td>
+        <td class="col1">Doutorado</td>
+        <td class="col2">75%</td>
+        <td class="col3">50%</td>
       </tr>
     </tbody>
   </table>
