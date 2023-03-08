@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 :root {
   --slide-width: 100%;
@@ -13,6 +14,8 @@
 
 body {
   background-color: var(--color4);
+font-family: 'Tilt Neon', cursive;
+  font-size: 1.2em;
 }
 
 .slides {

@@ -2,8 +2,12 @@
 .tab-quali {
   width: 35em; 
   border: 1px solid var(--color1);
+  font-size: 1.5em
 }
-  
+
+  .tab-quali tr {
+    height: 1.5em;
+  }
 .tab-quali  .col1 {
     width: 20em;
     text-align: left;
@@ -13,10 +17,10 @@
     text-align: center;
   }
 
-  td:hover {
+.tab-quali  td:hover {
     background-color: var(--color2);
     color: var(--color4);
-    font-size: 1.2em;
+    font-size: 2em;
   }
   
 
@@ -33,9 +37,9 @@
   <table class="tab-quali" style="margin-left: auto; margin-right: auto; display: block;">
     <thead>
       <tr>
-        <td class="col1">Nível de escolaridade superior ao previsto no cargo</td>
-        <td class="col2">Relação direta</td>
-        <td class="col3">Relação indireta</td>
+        <th class="col1">Nível de escolaridade superior ao previsto no cargo</th>
+        <th class="col2">Relação direta</th>
+        <th class="col3">Relação indireta</th>
       </tr>
     </thead>
     <tbody>
