@@ -79,6 +79,7 @@ function clicou(e) {
   console.log(e.target);
   console.log(e.target.dataset);
   console.log(e.target.dataset.padrao);
+  console.log(e.target.textContent);
 }
 
 function marcaCliques(){
