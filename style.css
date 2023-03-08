@@ -51,6 +51,11 @@ h2 {
   color: #f7c04a;
 }
 
+h3 {
+  text-align: center;
+  width: 40em;
+  margin: auto;
+}
 h1,
 h2 {
   text-align: center;
