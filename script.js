@@ -75,7 +75,18 @@ function desmarcaColuna(e, col){
 }
 
 
+function clicou(e) {
+  console.log(e.target);
+  console.log(e.target.dataset);
+  console.log(e.target.dataset.padrao);
+}
+
 function marcaCliques(){
   const table = document.getElementsByTagName("table")[0];
-  console.log(table);
+  const tds = document.getElementsByTagName("td");
+  for (let i = 0; i < tds.length; i++) {
+    const celula = tds.item(i);
+    celula.addEventListener("click", clicou)
+  }  
+  
 }
