@@ -73,3 +73,7 @@ function desmarcaColuna(e, col){
     celula.classList.remove("marcaCol");
   }  
 }
+
+function clicou(e) {
+  console.log(e);
+}
