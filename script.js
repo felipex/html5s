@@ -76,15 +76,23 @@ function desmarcaColuna(e, col){
 
 
 function clicou(e) {
-  /*
-  console.log(e.target);
-  console.log(e.target.dataset);
-  console.log(e.target.dataset.padrao);
- */
+  
   const cell = e.target;
  if (cell.textContent) {
-   i(cell.)
-    console.log(cell.textContent.padStart(2, "0"));
+   let nivel = "";
+   if (cell.classList.contains("col4")) {
+     nivel = "1";
+   } else if (cell.classList.contains("col5")) {
+     nivel = "2";
+   } else if (cell.classList.contains("col6")) {
+     nivel = "3";
+   } else if (cell.classList.contains("col7")) {
+     nivel = "4";
+   } 
+   const out = document.getElementsByClassName("padraoDeVenvimento")[0];
+   const step = cell.textContent.padStart(2, "0");
+   out.innerHTML = `D${nivel}${step}`;
+    console.log(out.innerHTML);
   }
 }
 
