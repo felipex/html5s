@@ -91,7 +91,7 @@ function clicou(e) {
    } 
    const out = document.getElementsByClassName("padraoDeVenvimento")[0];
    const step = cell.textContent.padStart(2, "0");
-   out.innerHTML = `D${nivel}${step}`;
+   out.innerHTML = `<span class="nivel">D</span><span class="capac">${nivel}</span><span class="padrao">${step}</span>`;
     console.log(out.innerHTML);
   }
 }
