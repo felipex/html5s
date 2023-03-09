@@ -76,10 +76,16 @@ function desmarcaColuna(e, col){
 
 
 function clicou(e) {
+  /*
   console.log(e.target);
   console.log(e.target.dataset);
   console.log(e.target.dataset.padrao);
-  console.log(e.target.textContent);
+ */
+  const cell = e.target;
+ if (cell.textContent) {
+   i(cell.)
+    console.log(cell.textContent.padStart(2, "0"));
+  }
 }
 
 function marcaCliques(){
