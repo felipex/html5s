@@ -16,7 +16,6 @@
   width: 200px;
   height: 200px;
 
-  background: blue;
   
   position: absolute;
   right: 0;
@@ -25,5 +24,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   
+}
+
+.key {
+  border: 1px solid red;
+  background-color: green;
+  opacity: 0.5;
+}
+
+.blank {
+  opacity: 0;
 }
 
