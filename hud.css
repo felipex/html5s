@@ -8,6 +8,8 @@
   top: 0;
   left: 0;
   border: 1px solid red;
+
+  display: block;
 }
 
 #controls {
@@ -15,7 +17,13 @@
   height: 200px;
 
   background: blue;
-
+  
   position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
 }
 
