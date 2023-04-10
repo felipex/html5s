@@ -26,10 +26,20 @@ function keyEvent(event) {
   selectSlide(index);
 }
 
+function clickEvent(event) {
+  if (event.target.id == "right") {
+    if (index < slides.children.length - 1) index++;
+  }
+  if (event.target.id == "left") {
+    if (index > 0) index--;
+  }
+  selectSlide(index);
+}
+
 const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
-document.body.getElementsByClassName("key").add
+Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
 
 selectSlide(0);
 
