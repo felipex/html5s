@@ -61,3 +61,28 @@
   100% { transform: scale(1); }
   }
 }
+
+#borders{
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+#border-left, 
+#border-right {
+  background-color: blue;
+  height: 100%;
+  width: 100px;
+  display: block;
+  position: absolute;
+}
+
+#border-left {
+  background-color: blue;
+  left
+}
+
+#border-right {
+  background-color: orange;
+}

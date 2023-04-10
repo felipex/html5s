@@ -39,6 +39,7 @@ function clickEvent(event) {
 
 function slideClickEvent(event) {
   console.log(event);
+  console.log(event.target);
 }
 
 const header = document.getElementById("header");
