@@ -28,10 +28,10 @@ function keyEvent(event) {
 
 function clickEvent(event) {
   console.log(event);
-  if (event.target.parentElement.id == "right") {
+  if (event.target.parentElement.parentElement.id == "right") {
     if (index < slides.children.length - 1) index++;
   }
-  if (event.target.parentElement.id == "left") {
+  if (event.target.parentElement.parentElement.id == "left") {
     if (index > 0) index--;
   }
   selectSlide(index);
