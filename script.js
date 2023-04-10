@@ -27,10 +27,11 @@ function keyEvent(event) {
 }
 
 function clickEvent(event) {
-  if (event.target.id == "right") {
+  console.log(event);
+  if (event.target.parentElement.id == "right") {
     if (index < slides.children.length - 1) index++;
   }
-  if (event.target.id == "left") {
+  if (event.target.parentElement.id == "left") {
     if (index > 0) index--;
   }
   selectSlide(index);
