@@ -27,8 +27,6 @@
 }
 
 .key {
-  border: 1px solid red;
-  background-color: green;
   opacity: 0.5;
 }
 
@@ -36,3 +34,16 @@
   opacity: 0;
 }
 
+.key img {
+  width: 100%;
+}
+
+#left img {
+  transform: rotate(-90deg)
+}
+#right img {
+  transform: rotate(90deg)
+}
+#bottom img {
+  transform: rotate(180deg)
+}
