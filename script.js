@@ -45,8 +45,9 @@ const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
 Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
-Array.from(document.body.getElementsByClassName("slide")).forEach(el => el.addEventListener("click", slideClickEvent));
-//document.body.getElementsByClassName("slides").addEventListener("click", slideClickEvent);
+const $slides = document.querySelectorAll(".slide");
+$slides.forEach(el => el.addEventListener("click", slideClickEvent));
+console.warn($slides);
 
 selectSlide(0);
 
