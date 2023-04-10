@@ -40,6 +40,13 @@ function clickEvent(event) {
 function hudClickEvent(event) {
   console.log(event);
   console.log(event.target);
+  if (event.target.id == "border-right") {
+    if (index < slides.children.length - 1) index++;
+  }
+  if (event.target.id == "border-left") {
+    if (index > 0) index--;
+  }
+  selectSlide(index);
 }
 
 const header = document.getElementById("header");
