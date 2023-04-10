@@ -1,0 +1,21 @@
+#hud {
+  width: var(--slide-width);
+  height: 800px;
+
+  color: var(--color2);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+}
+
+#controls {
+  width: 200px;
+  height: 200px;
+
+  background: blue;
+
+  position: absolute;
+}
+
