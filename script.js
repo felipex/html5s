@@ -37,10 +37,16 @@ function clickEvent(event) {
   selectSlide(index);
 }
 
+function slideClickEvent(event) {
+  console.log(event);
+}
+
 const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
 Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
+Array.from(document.body.getElementsByClassName("slide")).forEach(el => el.addEventListener("click", slideClickEvent));
+//document.body.getElementsByClassName("slides").addEventListener("click", slideClickEvent);
 
 selectSlide(0);
 
