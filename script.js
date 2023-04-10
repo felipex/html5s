@@ -37,7 +37,7 @@ function clickEvent(event) {
   selectSlide(index);
 }
 
-function slideClickEvent(event) {
+function hudClickEvent(event) {
   console.log(event);
   console.log(event.target);
 }
@@ -46,8 +46,12 @@ const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
 Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
+
 const $hud = document.querySelector("#hud");
-$hud.addEventListener("click", slideClickEvent);
+$hud.addEventListener("click", hudClickEvent);
+
+const $borders = document.querySelector("#borders");
+$borders.addEventListener("click", hudClickEvent);
 
 selectSlide(0);
 

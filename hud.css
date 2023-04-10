@@ -63,26 +63,28 @@
 }
 
 #borders{
-  border: 1px solid green;
   height: 100%;
   width: 100%;
-  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #border-left, 
 #border-right {
-  background-color: blue;
   height: 100%;
-  width: 100px;
+  width: 10%;
   display: block;
   position: absolute;
+  top: 0;
 }
 
 #border-left {
   background-color: blue;
-  left
+  left: 0;
 }
 
 #border-right {
   background-color: orange;
+  right: 0;
 }
