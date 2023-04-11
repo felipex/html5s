@@ -1,6 +1,13 @@
 let index = 0;
 const slides = document.getElementById("slides");
 
+function nextSlide() {
+    if (index < slides.children.length - 1) index++;
+}
+
+function prevSlide() {
+    if (index > 0) index--;
+}
 
 function selectSlide(index = 0) {
   for (let i = 0; i < slides.children.length; i++) {
@@ -12,10 +19,10 @@ function selectSlide(index = 0) {
 
 function keyEvent(event) {
   if (event.key == "ArrowRight") {
-    if (index < slides.children.length - 1) index++;
+    nextSlide();
   }
   if (event.key == "ArrowLeft") {
-    if (index > 0) index--;
+    prevSlide();
   }
   selectSlide(index);
 }
@@ -23,10 +30,10 @@ function keyEvent(event) {
 function clickEvent(event) {
   console.log(event);
   if (event.target.parentElement.parentElement.id == "right") {
-    if (index < slides.children.length - 1) index++;
+    nextSlide();
   }
   if (event.target.parentElement.parentElement.id == "left") {
-    if (index > 0) index--;
+    prevSlide();
   }
   selectSlide(index);
 }
@@ -35,10 +42,10 @@ function hudClickEvent(event) {
   console.log(event);
   console.log(event.target);
   if (event.target.id == "border-right") {
-    if (index < slides.children.length - 1) index++;
+    nextSlide();
   }
   if (event.target.id == "border-left") {
-    if (index > 0) index--;
+    prevSlide();
   }
   selectSlide(index);
 }
@@ -46,8 +53,13 @@ function hudClickEvent(event) {
 const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
-Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
 
+//Array.from(document.body.getElementsByClassName("key")).forEach((el) =>
+//  el.addEventListener("click", clickEvent)
+//);
+document.querySelectorAll(".key").forEach((el) =>
+  el.addEventListener("click", clickEvent)
+);
 
 const $borders = document.querySelector("#borders");
 $borders.addEventListener("dblclick", hudClickEvent);
