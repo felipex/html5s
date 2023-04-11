@@ -2,11 +2,17 @@ let index = 0;
 const slides = document.getElementById("slides");
 
 function nextSlide() {
-    if (index < slides.children.length - 1) index++;
+  if (index < slides.children.length - 1) index++;
 }
 
 function prevSlide() {
-    if (index > 0) index--;
+  if (index > 0) index--;
+}
+
+function navigateInSlides(toLeft, toRight) {
+  if (toLeft) prevSlide();
+  if (toRight) nextSlide();
+  selectSlide(index);
 }
 
 function selectSlide(index = 0) {
@@ -18,48 +24,30 @@ function selectSlide(index = 0) {
 }
 
 function keyEvent(event) {
-  if (event.key == "ArrowRight") {
-    nextSlide();
-  }
-  if (event.key == "ArrowLeft") {
-    prevSlide();
-  }
-  selectSlide(index);
+  navigateInSlides(event.key == "ArrowLeft", event.key == "ArrowRight");
 }
 
 function clickEvent(event) {
-  console.log(event);
-  if (event.target.parentElement.parentElement.id == "right") {
-    nextSlide();
-  }
-  if (event.target.parentElement.parentElement.id == "left") {
-    prevSlide();
-  }
-  selectSlide(index);
+  const clicked = event.target.parentElement.parentElement.id;
+  navigateInSlides(clicked == "left", clicked == "right");
 }
 
 function hudClickEvent(event) {
-  console.log(event);
-  console.log(event.target);
-  if (event.target.id == "border-right") {
-    nextSlide();
-  }
-  if (event.target.id == "border-left") {
-    prevSlide();
-  }
-  selectSlide(index);
+  navigateInSlides(
+    event.target.id == "border-left",
+    event.target.id == "border-right"
+  );
 }
+
 
 const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
 
-//Array.from(document.body.getElementsByClassName("key")).forEach((el) =>
-//  el.addEventListener("click", clickEvent)
-//);
-document.querySelectorAll(".key").forEach((el) =>
-  el.addEventListener("click", clickEvent)
-);
+
+document
+  .querySelectorAll(".key")
+  .forEach((el) => el.addEventListener("click", clickEvent));
 
 const $borders = document.querySelector("#borders");
 $borders.addEventListener("dblclick", hudClickEvent);
