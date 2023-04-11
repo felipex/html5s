@@ -1,3 +1,4 @@
+/*
 let index = 0;
 const slides = document.getElementById("slides");
 
@@ -83,6 +84,7 @@ function loadRemoteSlides() {
 }
 
 loadRemoteSlides();
+*/
 
 function marcaColuna(e, col) {
   const coluna = document.getElementsByClassName(col);
