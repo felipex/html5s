@@ -54,11 +54,9 @@ const header = document.getElementById("header");
 document.body.addEventListener("keydown", keyEvent);
 Array.from(document.body.getElementsByClassName("key")).forEach(el => el.addEventListener("click", clickEvent));
 
-const $hud = document.querySelector("#hud");
-$hud.addEventListener("click", hudClickEvent);
 
 const $borders = document.querySelector("#borders");
-$borders.addEventListener("click", hudClickEvent);
+$borders.addEventListener("dblclick", hudClickEvent);
 
 selectSlide(0);
 
