@@ -1,18 +1,19 @@
 let index = 0;
 const slides = document.getElementById("slides");
 
-function nextSlide() {
+function nextSlide(event = null) {
   if (index < slides.children.length - 1) index++;
+  selectSlide(index);
 }
 
-function prevSlide() {
+function prevSlide(event = null) {
   if (index > 0) index--;
+  selectSlide(index);
 }
 
 function navigateInSlides(toLeft, toRight) {
   if (toLeft) prevSlide();
   if (toRight) nextSlide();
-  selectSlide(index);
 }
 
 function selectSlide(index = 0) {
@@ -40,17 +41,16 @@ function hudClickEvent(event) {
 }
 
 
-const header = document.getElementById("header");
+//const header = document.getElementById("header");
 
 document.body.addEventListener("keydown", keyEvent);
 
-
-document
-  .querySelectorAll(".key")
+//document
+//  .querySelectorAll(".key")
   .forEach((el) => el.addEventListener("click", clickEvent));
 
 const $borders = document.querySelector("#borders");
-$borders.addEventListener("dblclick", hudClickEvent);
+//$borders.addEventListener("dblclick", hudClickEvent);
 
 selectSlide(0);
 

@@ -64,10 +64,10 @@
     <!-- Controls for slides navigation-->
     <div id="hud">
       <div id="borders">
-        <div id="border-left">
+        <div id="border-left" ondblclick="prevSlide()">
           
         </div>
-        <div id="border-right">
+        <div id="border-right" ondblclick="nextSlide()">
           
         </div>
       </div>
@@ -79,14 +79,14 @@
           />
         </div>
         <div class="key blank"></div>
-        <div id="left" class="key pulse">
+        <div id="left" class="key pulse" ondblclick="leftSlide()">
           <a href="#">
           <img
             src="https://cdn.glitch.global/234db7c3-7cd9-4ba0-935a-53798251fd1b/seta.svg?v=1681128858504"
           /></a>
         </div>
         <div class="key blank"></div>
-        <div id="right" class="key pulse">
+        <div id="right" class="key pulse" ondblclick="rightSlide()">
           <a href="#">
           <img
             src="https://cdn.glitch.global/234db7c3-7cd9-4ba0-935a-53798251fd1b/seta.svg?v=1681128858504"
