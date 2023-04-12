@@ -76,7 +76,7 @@
   display: block;
   position: absolute;
   top: 0;
-  opacity: 0;
+  opacity: 0.01;
 }
 
 #border-left a, 
@@ -85,6 +85,14 @@
   height: 100%;
   display: block;
   border: 1px solid blue;
+}
+
+
+#border-left a:hover, 
+#border-right a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  background-color: gray;
 }
 
 #border-left {
