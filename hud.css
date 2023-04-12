@@ -79,6 +79,14 @@
   opacity: 0;
 }
 
+#border-left a, 
+#border-right a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 1px solid blue;
+}
+
 #border-left {
   background-color: blue;
   left: 0;
